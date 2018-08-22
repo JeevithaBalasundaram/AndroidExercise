@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">AndroidExercise</string>
     <string name="generic_error_msg">Something went wrong! Please try again later.</string>
-    <string name="page_not_found"></string>
-    <string name="request_timeout"></string>
-    <string name="server_broken"></string>
+    <string name="page_not_found">Page not found</string>
+    <string name="request_timeout">Request Timeout</string>
+    <string name="server_broken">Server Error</string>
     <string name="no_network_message">Pleas check your internet connection and try again</string>
     <string name="button_ok">OK</string>
     <string name="loading">Loading...</string>
