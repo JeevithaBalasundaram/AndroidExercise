@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <!--padding and margins-->
+    <dimen name="DP15">15dp</dimen>
+    <dimen name="DP05">5dp</dimen>
+
+    <!--text sizes-->
+    <dimen name="SP20">20sp</dimen>
+    <dimen name="SP15">15sp</dimen>
+</resources>
