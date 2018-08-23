@@ -12,6 +12,8 @@ Used MVP architecture
 
 Retrofit2 for REST services and caching responses
 
+Butterknife for dependency injection
+
 Glide library for image loading
 
 RecyclerView for displaying rows on the UI
