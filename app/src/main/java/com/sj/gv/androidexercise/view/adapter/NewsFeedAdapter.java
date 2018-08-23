@@ -44,12 +44,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-//        final View itemView = LayoutInflater.from(mContext).inflate(R.layout.news_layout, parent, false);
-//        ViewHolder viewHolder = new ViewHolder(itemView);
-//        return viewHolder;
-
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_layout, null);
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_layout, null);
             view.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
             return new ViewHolder(view);
     }
@@ -81,17 +76,13 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         mViewHolder.newsHeadline.setText("");
         if(title!= null)
             mViewHolder.newsHeadline.setText(title);
-//        else
-//            mViewHolder.newsHeadline.setVisibility(View.INVISIBLE);
         if(description!= null)
             mViewHolder.newsDescription.setText(description);
-//        else
-//            mViewHolder.newsDescription.setVisibility(View.INVISIBLE);
         if(imageUrl != null) {
             Glide.with(mContext)
                     .load(imageUrl)
-                    .placeholder(R.drawable.switch_toggr_android)
-                    .error(R.drawable.ic_launcher_background)
+                    .placeholder(R.drawable.no_image)
+                    .error(R.drawable.no_image)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .dontTransform()
                     .dontAnimate()
