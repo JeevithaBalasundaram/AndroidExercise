@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 
 project.ext {
     retrofit = "2.1.0"
+    butterknife = "8.5.1"
+    butterknife = "8.5.1"
+    glide = "3.7.0"
+    okhttp = "2.7.5"
 }
 
 android {
@@ -37,7 +41,10 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$project.retrofit"
     implementation "com.squareup.retrofit2:converter-jackson:$project.retrofit"
 
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.github.bumptech.glide:okhttp-integration:1.4.0@aar'
-    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation "com.github.bumptech.glide:glide:$project.glide"
+    implementation "com.github.bumptech.glide:okhttp-integration:1.4.0@aar"
+    implementation "com.squareup.okhttp:okhttp:$project.okhttp"
+
+    implementation "com.jakewharton:butterknife:$project.butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$project.butterknife"
 }

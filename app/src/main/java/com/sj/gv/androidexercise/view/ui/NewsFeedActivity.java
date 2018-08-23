@@ -21,21 +21,25 @@ import com.sj.gv.androidexercise.view.viewinterface.ViewPresenterInterface;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class NewsFeedActivity extends AppCompatActivity implements ViewPresenterInterface{
 
     private final String TAG = NewsFeedActivity.class.getSimpleName();
 
     private ProgressDialog mProgressDialog;
-    private RecyclerView mRecyclerView;
     private NewsPresenter mNewsPresenter;
-    private SwipeRefreshLayout mSwipeRefreshLayout;
+
+    @BindView(R.id.refreshLayout) SwipeRefreshLayout mSwipeRefreshLayout;
+    @BindView(R.id.news_recycler_view) RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_feed);
-        mRecyclerView = findViewById(R.id.news_recycler_view);
-        mSwipeRefreshLayout = findViewById(R.id.refreshLayout);
+
+        ButterKnife.bind(this);
 
 
         mProgressDialog = new ProgressDialog(this);
