@@ -40,7 +40,7 @@ public class RestClient {
                         return response;
                     }
                 })
-              //  .cache(cache)
+                .cache(cache)
                 .build();
 
         if (retrofit == null) {

@@ -72,6 +72,9 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         String title = feed.getTitle();
         String description = feed.getDescription();
         String imageUrl = getImg(feed);
+
+        if(title == null && description == null && imageUrl == null) return;
+
         mViewHolder.newsDescription.setText("");
         mViewHolder.newsHeadline.setText("");
         if(title!= null)
