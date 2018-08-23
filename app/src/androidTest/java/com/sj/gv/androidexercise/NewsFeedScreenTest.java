@@ -21,10 +21,12 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
@@ -46,7 +48,6 @@ public class NewsFeedScreenTest {
 
         Assert.assertTrue(getRecyclerViewItemCount() > 0);
     }
-
 
     private int getRecyclerViewItemCount(){
         RecyclerView recyclerView =  mNewsActivityRule.getActivity().findViewById(R.id.news_recycler_view);
