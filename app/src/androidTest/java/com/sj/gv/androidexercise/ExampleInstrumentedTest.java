@@ -1,4 +1,4 @@
-package com.sj.gv.androidpoc;
+package com.sj.gv.androidexercise;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.sj.gv.androidpoc", appContext.getPackageName());
+        assertEquals("com.sj.gv.androidexercise", appContext.getPackageName());
     }
 }
