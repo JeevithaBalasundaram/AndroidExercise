@@ -7,8 +7,12 @@ import android.util.Log;
 
 import com.sj.gv.androidexercise.AndroidApplication;
 import com.sj.gv.androidexercise.R;
+import com.sj.gv.androidexercise.model.NewsApiResponse;
+import com.sj.gv.androidexercise.model.NewsFeed;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AppUtils {
 
@@ -58,6 +62,5 @@ public class AppUtils {
         }
         return false;
     }
-
 
 }

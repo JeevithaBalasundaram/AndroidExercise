@@ -39,10 +39,10 @@ public class NewsFeedScreenTest {
     //test case to check if the count of items in recycler view is more than zero, meaning it has some data
     @Test
     public void newsLoadedTest(){
-        //asking to wait for 8 seconds, until the view loads(assuming the view will not a null by then)
+        //asking to wait for 9 seconds, until the view loads(assuming the view will not a null by then)
         // have to use IdlingResource until the view loads, waiting for random seconds is not the recommended way
 
-        Espresso.onView(isRoot()).perform(waitFor(8000));
+        Espresso.onView(isRoot()).perform(waitFor(9000));
 
         // once the view is loaded check if the item count is more than 0
 

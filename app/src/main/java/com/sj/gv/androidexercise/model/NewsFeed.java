@@ -13,7 +13,6 @@ public class NewsFeed {
     @SerializedName("imageHref")
     public String imageUrl;
 
-
     public String getTitle() {
         return title;
     }

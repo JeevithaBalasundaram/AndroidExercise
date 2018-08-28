@@ -73,6 +73,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         String description = feed.getDescription();
         String imageUrl = getImg(feed);
 
+
         if(title == null && description == null && imageUrl == null) return;
 
         mViewHolder.newsDescription.setText("");
@@ -86,14 +87,13 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     .load(imageUrl)
                     .placeholder(R.drawable.no_image)
                     .error(R.drawable.no_image)
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .diskCacheStrategy(DiskCacheStrategy.RESULT)
                     .dontTransform()
                     .dontAnimate()
                     .into(mViewHolder.newsImage);
         }
-        else {
-            mViewHolder.newsImage.setVisibility(View.INVISIBLE);
+        else
             Glide.clear(mViewHolder.newsImage);
-        }
+
     }
 }

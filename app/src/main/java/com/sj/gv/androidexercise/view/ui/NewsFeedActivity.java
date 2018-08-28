@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.sj.gv.androidexercise.model.NewsApiResponse;
+import com.sj.gv.androidexercise.utils.AppUtils;
 import com.sj.gv.androidexercise.view.adapter.NewsFeedAdapter;
 import com.sj.gv.androidexercise.R;
 import com.sj.gv.androidexercise.presenter.NewsPresenter;
@@ -75,12 +76,9 @@ public class NewsFeedActivity extends AppCompatActivity implements ViewPresenter
         NewsFeedAdapter mNewsFeedAdapter = new NewsFeedAdapter(this);
         if(newsFeeds !=  null) {
             mNewsFeedAdapter.setFeedsList(newsFeeds);
-            mNewsFeedAdapter.notifyDataSetChanged();
             mRecyclerView.setAdapter(mNewsFeedAdapter);
         }
-
     }
-
 
     @Override
     public void displayErrorNotification(String errorMessage) {
